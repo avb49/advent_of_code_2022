@@ -18,7 +18,7 @@ def main():
         # 1. split string into 2 parts (the two rucksack compartments)
         compartment_1, compartment_2 = rucksack[:len(rucksack)//2], rucksack[len(rucksack)//2:]
         # 2. check for intersection to find the single character in both (write method)
-        item_in_both_compartments = get_intersection_of_two_strings(compartment_1, compartment_2)
+        item_in_both_compartments = get_intersection_of_two_items(compartment_1, compartment_2)
         # 3. translate character into a value using ASCII values with an offset applied
         value = get_item_priority(item_in_both_compartments.pop())
 
