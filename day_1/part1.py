@@ -1,7 +1,7 @@
 # 1. import data
 import csv
 
-with open("code advent - day 1 input.csv", newline='', encoding='utf-8-sig') as file:
+with open("day_1/data/code advent - day 1 input.csv", newline='', encoding='utf-8-sig') as file:
     reader = csv.reader(file)
     data = list(reader)
     data.append([])

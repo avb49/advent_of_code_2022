@@ -1,12 +1,8 @@
-# NEATER Solution
-
-
-
 # 1. import data
 import csv
 import time
 
-with open("code advent - day 1 input.csv", newline='', encoding='utf-8-sig') as file:
+with open("day_1/data/code advent - day 1 input.csv", newline='', encoding='utf-8-sig') as file:
     reader = csv.reader(file)
     data = list(reader)
     data.append([])
@@ -14,12 +10,7 @@ with open("code advent - day 1 input.csv", newline='', encoding='utf-8-sig') as 
 start_time = time.time()
 
 # 2. iterate through list -> keep a current_counter and a max variable. When space, compare to max and reset current_counter
-max_calories_top1 = 0
-max_calories_top2 = 0
-max_calories_top3 = 0
-
 current_calories = 0
-
 totals = []
 for item in data:
     if item == []:     

@@ -51,7 +51,7 @@ def translate_round_to_shapes_played(round: str) -> str:
 def main():
     
     # 1. import data
-    rounds_played = read_data("day_2/data.txt")
+    rounds_played = read_data("day_2/data/data.txt")
 
     # 2. for each round played, count points for the game
     total_points = 0
