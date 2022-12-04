@@ -1,5 +1,5 @@
-# advent_of_code_2022
-Solutions for the Advent of Code 2022 coding challenges.
+# Advent of Code 2022 - my solutions
+My solutions to the Advent of Code 2022 coding challenges.
 
 I have paid particular attention to code readability and solution simplicity (not overengineering solutions) to make them easy to understand for others. Code modularisation and re-use concepts have also been taken into account.
 
