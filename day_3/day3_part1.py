@@ -19,7 +19,7 @@ def main():
         compartment_1, compartment_2 = rucksack[:len(rucksack)//2], rucksack[len(rucksack)//2:]
         # 2. check for intersection to find the single character in both (write method)
         item_in_both_compartments = get_intersection_of_two_strings(compartment_1, compartment_2)
-        # 3. translate character into a value using a list with indeces representing value
+        # 3. translate character into a value using ASCII values with an offset applied
         value = get_item_priority(item_in_both_compartments.pop())
 
         priority_sum += value

@@ -15,7 +15,7 @@ def main():
         rucksack_1, rucksack_2, rucksack_3 = rucksacks_data[rucksack_index], rucksacks_data[rucksack_index + 1], rucksacks_data[rucksack_index + 2]
         # 2. get intersection of the three rucksacks
         badge_in_rucksacks = get_intersection_of_three_strings(rucksack_1, rucksack_2, rucksack_3)
-        # 3. translate character into a value using a list with indeces representing value
+        # 3. translate character into a value using ASCII values with an offset applied
         value = get_item_priority(badge_in_rucksacks.pop())
 
         priority_sum += value
