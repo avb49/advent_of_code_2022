@@ -25,10 +25,10 @@ def main():
         # 1. split string into 2 using split(,) using comma as delimiter
         elf_1_sections, elf_2_sections = pair_section_assignment.split(',')
         
-        # 2. convert each assignment (e.g., 2-4) into a number (234)
+        # 2. convert each assignment (e.g., 2-4) into a list of numbers, [2,3,4]
         elf_1_sections, elf_2_sections = convert_shorthand_to_list_of_sections(elf_1_sections), convert_shorthand_to_list_of_sections(elf_2_sections)
         
-        # 3. identify overlap of two numbers, e.g., 234 and 678 (using intersection method)
+        # 3. identify overlap of two listss, e.g., [2,3,4] and [6,7,8] (using intersection method)
         intersection = get_intersection_of_two_items(elf_1_sections, elf_2_sections)
         
         # 4. check for overlaps
