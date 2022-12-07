@@ -1,6 +1,7 @@
 import time
 import re
 from collections import deque
+
 from utils import *
 
 DISTANCE_BETWEEN_CRATES = 4
