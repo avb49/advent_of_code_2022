@@ -19,7 +19,8 @@ def main():
 
     start_time = time.time()
 
-    for index in range(0, len(datastream)):
+    match_found = False
+    for index in range(0, len(datastream) - MARKER_LENGTH):
         
         # 2. use string slicing to get 4-character blocks
         potential_marker = datastream[index:MARKER_LENGTH + index]
@@ -27,8 +28,11 @@ def main():
         # 3. check if 4-character block is unique, break out of for loop if it is
         if are_chars_unique(potential_marker):
             print(MARKER_LENGTH + index)
+            match_found = True
             break
 
+    if match_found == False:
+        print("No match was found for the given input.")
     print()
     print("--- %s seconds ---" % (time.time() - start_time))
 
