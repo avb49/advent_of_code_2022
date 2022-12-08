@@ -16,9 +16,6 @@ COMMAND_SEARCH_PATTERN = r"cd (.*)"
 # finds size and name of file (two groups)
 FILE_SEARCH_PATTERN = r"([0-9]*) (.*)"
 
-# finds name of a directory
-DIR_SEARCH_PATTERN = r"dir (.*)"
-
 MAX_DIRECTORY_SIZE = 100000
 TOTAL_DISK_SPACE = 70000000
 DISK_SPACE_NEEDED_FOR_UPDATE = 30000000
