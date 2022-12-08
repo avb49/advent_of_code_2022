@@ -11,7 +11,7 @@ class Directory:
         self.parent_dir = parent_dir
 
 # finds name of directory (1 group)
-COMMAND_SEARCH_PATTERN = r"cd (.*)"
+DIRECTORY_SEARCH_PATTERN = r"cd (.*)"
 
 # finds size and name of file (two groups)
 FILE_SEARCH_PATTERN = r"([0-9]*) (.*)"
@@ -66,7 +66,7 @@ def main():
 
         elif "$ cd" in filesystem_data[line_index]:
             # create new Directory object and add to list of directories
-            directory_name = re.search(COMMAND_SEARCH_PATTERN, filesystem_data[line_index]).group(1)
+            directory_name = re.search(DIRECTORY_SEARCH_PATTERN, filesystem_data[line_index]).group(1)
             directory = Directory(directory_name, 0, current_dir)
             directories.append(directory)
             current_dir = directory
