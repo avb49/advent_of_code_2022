@@ -55,21 +55,21 @@ def main():
 
     start_time = time.time()
     root_directory = Directory("/", 0, None)
-    current_dir = root_directory 
+    current_directory = root_directory 
 
     directories = []
 
     for line_index in range(0, len(filesystem_data)):
 
         if "$ cd .." == filesystem_data[line_index]:
-            current_dir = current_dir.parent_dir
+            current_directory = current_directory.parent_dir
 
         elif "$ cd" in filesystem_data[line_index]:
             # create new Directory object and add to list of directories
-            directory_name = re.search(DIRECTORY_SEARCH_PATTERN, filesystem_data[line_index]).group(1)
-            directory = Directory(directory_name, 0, current_dir)
-            directories.append(directory)
-            current_dir = directory
+            new_directory_name = re.search(DIRECTORY_SEARCH_PATTERN, filesystem_data[line_index]).group(1)
+            new_directory = Directory(new_directory_name, 0, current_directory)
+            directories.append(new_directory)
+            current_directory = new_directory
 
         elif filesystem_data[line_index][0] != "$":
 
@@ -81,7 +81,7 @@ def main():
                 # get file size
                 file_size = file_match_object.group(1)
                 # add file size to current directory and all its parents
-                to_update = current_dir
+                to_update = current_directory
                 while(to_update is not None):
                     to_update.size += int(file_size)
                     to_update = to_update.parent_dir
