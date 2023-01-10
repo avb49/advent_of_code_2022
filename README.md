@@ -1,7 +1,7 @@
 # Advent of Code 2022 - my solutions
 My solutions to the Advent of Code 2022 coding challenges.
 
-I have paid particular attention to code readability and solution simplicity (not overengineering solutions) to make them easy to understand for others. I have used a object-oriented approach where appropriate and have included a utils.py module to allow for effective re-use of code.
+I have paid particular attention to code readability and solution simplicity (not overengineering solutions) to make them easy to understand for others. I have used an object-oriented approach where appropriate and have included a utils.py module to allow for effective re-use of code.
 
 All of the solutions give the correct answers to the challenges for both the test data and actual data.
 
